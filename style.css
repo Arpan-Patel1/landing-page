@@ -34,9 +34,12 @@ body {
     var(--gradient-red)
   );
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero::before {
+.heroContainer {
   content: "";
   display: block;
   height: 100%;
@@ -45,4 +48,85 @@ body {
   /* background-size: 350%; */
   background-repeat: no-repeat;
   background-position: -340px -300px;
+  padding: 45px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+}
+
+.top {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+  background-image: url(images/logo.svg);
+  background-repeat: no-repeat;
+}
+
+.hamburger {
+  height: 100%;
+  width: 35px;
+  background-image: url(images/icon-hamburger.svg);
+  background-repeat: no-repeat;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.heading {
+  width: 100%;
+  font-family: overpass;
+  font-size: 33px;
+  font-weight: 600;
+  color: white;
+}
+
+.headingPara {
+  font-size: 20px;
+  width: 90%;
+  font-family: overpass;
+  font-weight: 300;
+  color: white;
+}
+
+.heroButton {
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-family: overpass;
+  font-weight: 700;
+}
+
+.start {
+  border: 0;
+  color: var(--gradient-red);
+}
+
+.learn {
+  border: 1px solid var(--neutral-white);
+  background-color: transparent;
+  color: var(--neutral-white);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
 }
