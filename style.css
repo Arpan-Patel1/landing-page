@@ -27,7 +27,7 @@ body {
 }
 
 .hero {
-  height: 75%;
+  height: 73%;
   border-radius: 0 0 0 100px;
   background-image: linear-gradient(
     var(--gradient-light-red),
@@ -47,7 +47,7 @@ body {
   background-image: url(images/bg-pattern-intro-mobile.svg);
   /* background-size: 350%; */
   background-repeat: no-repeat;
-  background-position: -340px -250px;
+  background-position: -330px -250px;
   padding: 45px 25px;
   display: flex;
   flex-direction: column;
