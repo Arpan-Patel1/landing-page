@@ -24,6 +24,9 @@ body {
   margin: 0px;
   height: 100vh;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }
 
 .hero {
@@ -131,4 +134,16 @@ body {
   align-items: center;
   width: 90%;
   gap: 20px;
+}
+
+.secHeading {
+  color: var(--primary-dark-blue);
+  font-size: 27px;
+}
+
+.editorIllustration {
+  height: 100px;
+  width: 100%;
+  background-image: url(images/illustration-editor-mobile.svg);
+  background-repeat: no-repeat;
 }
