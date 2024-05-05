@@ -18,12 +18,19 @@
   --gradient-red: hsl(353, 100%, 62%);
   --gradient-dark-voilet: hsl(237, 17%, 21%);
   --gradient-voilet: hsl(237, 23%, 32%);
+
+  --font-small: 16px;
+  --font-medium: 27px;
+  --font-large: 34px;
+
+  --line-height: 10px;
 }
 
 body {
   margin: 0px;
   height: 100vh;
   overflow: auto;
+  font-size: var(--font-small);
 }
 
 .hero {
@@ -89,25 +96,24 @@ body {
 .heading {
   width: 100%;
   font-family: overpass;
-  font-size: 34px;
+  font-size: var(--font-large);
   font-weight: 600;
   color: white;
   text-align: center;
 }
 
 .headingPara {
-  font-size: 18px;
   width: 90%;
   font-family: overpass;
   font-weight: 300;
   color: white;
+  text-align: center;
 }
 
 .heroButton {
   width: 150px;
   height: 45px;
   border-radius: 50px;
-  font-size: 16px;
   font-family: overpass;
   font-weight: 900;
 }
@@ -131,17 +137,91 @@ body {
   gap: 20px;
 }
 
-.secHeading {
-  color: var(--primary-dark-blue);
-  font-size: 27px;
+.section {
   padding-top: 80px;
-}
-
-.editorIllustration {
-  height: 100%;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.secHeading {
+  color: var(--primary-dark-blue);
+  font-size: var(--font-medium);
+  padding: 15px 0 0 0;
+}
+
+.illustration {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
   padding: 30px 0;
+  overflow: hidden;
+}
+
+.illustration img {
+  object-fit: contain;
+}
+
+.para {
+  width: 74%;
+  font-family: overpass;
+  font-weight: 300;
+  color: var(--neutral-dark-grayish-blue);
+  text-align: center;
+  padding: 20px 0 20px 0;
+  line-height: calc(var(--font-small) + var(--line-height));
+}
+
+.section2 {
+  height: 73%;
+  background-image: linear-gradient(
+    var(--gradient-dark-voilet),
+    var(--gradient-voilet)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 100px 0 100px;
+  margin-top: 250px;
+  position: relative;
+}
+
+.section2::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/bg-pattern-circles.svg);
+  background-size: 160%;
+  background-repeat: no-repeat;
+  background-position: 50% -230px;
+  border-radius: 0 100px 0 100px;
+  position: absolute;
+  z-index: 0;
+}
+
+.phones {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -175px;
+}
+
+.infrastructure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding-top: 100px;
+}
+
+.infraPara {
+  line-height: calc(var(--font-small) + var(--line-height));
+  width: 80%;
 }
