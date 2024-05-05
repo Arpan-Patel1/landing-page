@@ -78,7 +78,7 @@ body {
 .hamburger {
   height: 100%;
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
 .text {
@@ -234,6 +234,7 @@ footer {
   border-radius: 0 var(--border-radius) 0 0;
   gap: 60px;
   font-family: ubuntu;
+  margin-top: 50px;
 }
 
 .footerSection {
