@@ -8,6 +8,7 @@
   --primary-red: hsl(356, 100%, 66%);
   --primary-light-red: hsl(355, 100%, 74%);
   --primary-dark-blue: hsl(208, 49%, 24%);
+  --primary-background-color: hsl(0, 0%, 100%);
 
   --neutral-white: hsl(0, 0%, 100%);
   --neutral-grayish-blue: hsl(240, 2%, 79%);
@@ -27,6 +28,8 @@
   --line-height: 10px;
 
   --border-radius: 100px;
+
+  --animation-transition: 500ms;
 }
 
 body {
@@ -34,6 +37,20 @@ body {
   height: 100vh;
   overflow: auto;
   font-size: var(--font-small);
+  background-color: var(--primary-background-color);
+  transition: var(--animation-transition);
+}
+
+.darkTheme {
+  --primary-background-color: hsl(0, 0%, 15%);
+  --primary-dark-blue: hsl(0, 0%, 100%);
+  --neutral-dark-grayish-blue: hsl(240, 2%, 79%);
+  --gradient-light-red: hsl(237, 23%, 32%);
+  --gradient-red: hsl(237, 17%, 21%);
+}
+
+.darkTheme .heroContainer {
+  background-image: url(images/bg-pattern-intro-mobile-dark.svg);
 }
 
 .hero {
@@ -73,6 +90,39 @@ body {
 
 .logoImage {
   height: 100%;
+}
+
+.themeButton {
+  background-color: var(--primary-background-color);
+  height: 80%;
+  aspect-ratio: 2;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.themeToggle {
+  height: calc(100% - 6px);
+  aspect-ratio: 1;
+  border-radius: 50px;
+  background-color: var(--gradient-red);
+  position: absolute;
+  transition: var(--animation-transition);
+  rotate: 0deg;
+  left: 0;
+  top: 0;
+  translate: 4px 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--neutral-white);
+  font-family: ubuntu;
+}
+
+.themeToggleDark {
+  left: 100%;
+  rotate: 360deg;
+  translate: calc(-100% - 4px) 3px;
 }
 
 .hamburger {
