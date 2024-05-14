@@ -12,7 +12,8 @@
   --primary-button-color: hsl(0, 0%, 15%);
 
   --neutral-white: hsl(0, 0%, 100%);
-  --neutral-grayish-blue: hsl(240, 2%, 79%);
+
+  --neutral-grayish-blue: hsl(16, 31%, 93%);
   --neutral-dark-grayish-blue: hsl(207, 13%, 34%);
   --neutral-dark-black-blue: hsl(240, 10%, 16%);
 
@@ -53,6 +54,7 @@ body {
   --neutral-dark-grayish-blue: hsl(240, 2%, 79%);
   --gradient-light-red: hsl(237, 23%, 32%);
   --gradient-red: hsl(237, 17%, 21%);
+  --neutral-grayish-blue: hsl(240, 31%, 93%);
 }
 
 .darkTheme .heroContainer {
@@ -551,7 +553,7 @@ footer {
 
   .sectionDesk {
     width: 100%;
-    height: 900px;
+    height: 100%;
     padding-top: 80px;
     display: block;
     justify-content: center;
@@ -559,9 +561,9 @@ footer {
     flex-direction: column;
     background-image: url(images/illustration-editor-desktop.svg);
     background-repeat: no-repeat;
-    background-size: 60%;
-    background-position: 720px 90px;
-    padding-top: 150px;
+    background-size: 55%;
+    background-position: 130% 50%;
+    padding: 150px 0;
   }
 
   .darkTheme .sectionDesk {
@@ -571,7 +573,6 @@ footer {
   .para {
     width: 100%;
     text-align: left;
-    padding: 0px 130px;
   }
   .secHeadingDesk {
     color: var(--primary-dark-blue);
@@ -581,12 +582,14 @@ footer {
     width: 60%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 130px;
   }
   .subHeadingDesk {
     color: var(--primary-dark-blue);
     font-size: var(--font-desktop-normal);
     text-align: start;
-    padding: 0px 130px;
     padding-top: 80px;
   }
 
@@ -661,15 +664,15 @@ footer {
 
   .sectionDeskBelow {
     width: 100%;
-    height: 930px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: end;
     flex-direction: column;
     background-image: url(images/illustration-laptop-desktop.svg);
     background-repeat: no-repeat;
-    background-size: 75%;
-    background-position: -300px 100px;
+    background-size: 55%;
+    background-position: -35% 55%;
     padding: 100px 0;
   }
 
@@ -784,7 +787,7 @@ footer {
 
   .dropdown {
     position: relative;
-    display: flexbox;
+    display: inline-block;
   }
 
   .dropdown-content {
