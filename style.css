@@ -461,6 +461,12 @@ footer {
 .topButton {
   display: none;
 }
+.topRight {
+  display: none;
+}
+.dropdown {
+  display: none;
+}
 
 @media only screen and (min-width: 1280px) {
   .hamburger {
